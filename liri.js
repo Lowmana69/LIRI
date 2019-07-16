@@ -52,7 +52,7 @@ var getMovie = function(title) {
     });
 };
 
-var locateConcert = function(artists) {
+var locateConcert = function(artist) {
     axios.get("https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp")
         .then(function(response) {
             console.log('Name of the venue:' + response.data[0].venue.name);
